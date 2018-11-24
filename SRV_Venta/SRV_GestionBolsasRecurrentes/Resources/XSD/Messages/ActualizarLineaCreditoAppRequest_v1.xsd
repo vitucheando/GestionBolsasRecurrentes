@@ -1,0 +1,43 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            xmlns="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCreditoAppRequest_request" 
+            targetNamespace="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCreditoAppRequest_request" 
+            elementFormDefault="qualified" 
+            xmlns:nxsd="http://xmlns.oracle.com/pcbpel/nxsd" 
+            nxsd:version="JSON" 
+            nxsd:encoding="UTF-8">
+            
+   <xsd:element name="actualizarLineaCreditoAppRequest">
+      <xsd:complexType>
+         <xsd:sequence>
+            <xsd:element name="header">
+               <xsd:complexType>
+                  <xsd:sequence>
+                     <xsd:element name="canal" type="xsd:string"/>
+                     <xsd:element name="idAplicacion" type="xsd:integer"/>
+                     <xsd:element name="usuario" type="xsd:string"/>
+                     <xsd:element name="idTransaccionESB" type="xsd:integer"/>
+                     <xsd:element name="idTransaccionNegocio" type="xsd:integer"/>
+                     <xsd:element name="fechaInicio" type="xsd:string"/>
+                     <xsd:element name="nodoAdicional" type="xsd:string"/>
+                  </xsd:sequence>
+               </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="body">
+               <xsd:complexType>
+                  <xsd:sequence>
+                     <xsd:element name="numeroDocumento" type="xsd:string"/>
+                     <xsd:element name="monto" type="xsd:double"/>
+                     <xsd:element name="fechaReserva" type="xsd:dateTime"/>
+                  </xsd:sequence>
+               </xsd:complexType>
+            </xsd:element>
+         </xsd:sequence>
+      </xsd:complexType>
+   </xsd:element>
+   
+<xsd:annotation xmlns="">
+      <xsd:appinfo>NXSDSAMPLE=</xsd:appinfo>
+      <xsd:appinfo>USEHEADER=false</xsd:appinfo>
+   </xsd:annotation>
+</xsd:schema>
