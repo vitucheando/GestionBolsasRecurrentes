@@ -1,13 +1,13 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-            xmlns="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCreditoAppResponse_response" 
-            targetNamespace="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCreditoAppResponse_response" 
+            xmlns="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCredito_response" 
+            targetNamespace="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCredito_response" 
             elementFormDefault="qualified" 
             xmlns:nxsd="http://xmlns.oracle.com/pcbpel/nxsd" 
             nxsd:version="JSON" 
             nxsd:encoding="UTF-8">
             
-   <xsd:element name="actualizarLineaCreditoAppResponse">
+   <xsd:element name="actualizarLineaCreditoResponse">
       <xsd:complexType>
          <xsd:sequence>
             <xsd:element name="header">

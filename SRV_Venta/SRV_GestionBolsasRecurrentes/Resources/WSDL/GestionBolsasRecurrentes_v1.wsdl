@@ -5,8 +5,8 @@
      xmlns:tns="http://xmlns.oracle.com/SOAECommerce/SRV_GestionBolsasRecurrentes/GestionBolsasRecurrentes"
      xmlns:inp1="http://entel.com.pe/GestionBolsasRecurrentes_ActivarBolsa_request"
      xmlns:inp2="http://entel.com.pe/GestionBolsasRecurrentes_ActivarBolsa_response"
-     xmlns:ope1="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCreditoAppRequest_request"
-     xmlns:ope2="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCreditoAppResponse_response"
+     xmlns:ope1="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCredito_request"
+     xmlns:ope2="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCredito_response"
      xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
      xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
      xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
@@ -23,12 +23,12 @@
                  schemaLocation="../XSD/Messages/ActivarBolsaResponse_v1.xsd"/>
         </xsd:schema>
         <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-            <xsd:import namespace="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCreditoAppRequest_request"
-                 schemaLocation="../XSD/Messages/ActualizarLineaCreditoAppRequest_v1.xsd"/>
+            <xsd:import namespace="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCredito_request"
+                 schemaLocation="../XSD/Messages/ActualizarLineaCreditoRequest_v1.xsd"/>
         </xsd:schema>
         <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-            <xsd:import namespace="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCreditoAppRespone_response"
-                 schemaLocation="../XSD/Messages/ActualizarLineaCreditoAppResponse_v1.xsd"/>
+            <xsd:import namespace="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCredito_response"
+                 schemaLocation="../XSD/Messages/ActualizarLineaCreditoResponse_v1.xsd"/>
         </xsd:schema>
     </wsdl:types>
     <!--procesarActivacionBolsas-->
@@ -39,11 +39,11 @@
         <wsdl:part name="reply" element="inp2:activarBolsaResponse"/>
     </wsdl:message>
     <!--actualizarLineaCredito-->
-    <wsdl:message name="ActualizarLineaCreditoApp_inputMessage">
-        <wsdl:part name="request" element="ope1:actualizarLineaCreditoAppRequest"/>
+    <wsdl:message name="ActualizarLineaCredito_inputMessage">
+        <wsdl:part name="request" element="ope1:actualizarLineaCreditoRequest"/>
     </wsdl:message>
-    <wsdl:message name="ActualizarLineaCreditoApp_outputMessage">
-        <wsdl:part name="reply" element="ope2:actualizarLineaCreditoAppResponse"/>
+    <wsdl:message name="ActualizarLineaCredito_outputMessage">
+        <wsdl:part name="reply" element="ope2:actualizarLineaCreditoResponse"/>
     </wsdl:message>
     <!--PortType-->
     <wsdl:portType name="GestionBolsasRecurrentes_ptt">
@@ -51,9 +51,9 @@
             <wsdl:input message="tns:ActivarBolsa_inputMessage"/>
             <wsdl:output message="tns:ActivarBolsa_outputMessage"/>
         </wsdl:operation>
-        <wsdl:operation name="actualizarLineaCreditoApp">
-            <wsdl:input message="tns:ActualizarLineaCreditoApp_inputMessage"/>
-            <wsdl:output message="tns:ActualizarLineaCreditoApp_outputMessage"/>
+        <wsdl:operation name="actualizarLineaCredito">
+            <wsdl:input message="tns:ActualizarLineaCredito_inputMessage"/>
+            <wsdl:output message="tns:ActualizarLineaCredito_outputMessage"/>
         </wsdl:operation>
     </wsdl:portType>
     <!--Binding-->
@@ -68,8 +68,8 @@
                 <soap:body use="literal"/>
             </wsdl:output>
         </wsdl:operation>
-        <wsdl:operation name="actualizarLineaCreditoApp">
-            <soap:operation soapAction="ActualizarLineaCreditoApp"/>
+        <wsdl:operation name="actualizarLineaCredito">
+            <soap:operation soapAction="ActualizarLineaCredito"/>
             <wsdl:input>
                 <soap:body use="literal"/>
             </wsdl:input>

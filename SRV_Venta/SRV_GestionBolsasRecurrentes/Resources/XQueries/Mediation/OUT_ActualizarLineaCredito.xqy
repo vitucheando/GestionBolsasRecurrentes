@@ -2,8 +2,8 @@ xquery version "1.0" encoding "utf-8";
 
 (:: OracleAnnotationVersion "1.0" ::)
 
-declare namespace ns2="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCreditoAppResponse_response";
-(:: import schema at "../../XSD/Messages/ActualizarLineaCreditoAppResponse_v1.xsd" ::)
+declare namespace ns2="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCredito_response";
+(:: import schema at "../../XSD/Messages/ActualizarLineaCreditoResponse_v1.xsd" ::)
 declare namespace ns1="http://xmlns.oracle.com/pcbpel/adapter/db/sp/CON_SP_UPD_AVAILABLE_AMOUNT";
 (:: import schema at "../../../../../CON_BD_BDATOS01/CON_COMPRAPAQ/CON_SP_UPD_AVAILABLE_AMOUNT/Resources/XSD/CON_SP_UPD_AVAILABLE_AMOUNT_sp.xsd" ::)
 
@@ -14,8 +14,8 @@ declare variable $idTransaccionESB as xs:long external;
 declare variable $idTransaccionNegocio as xs:long external;
 declare variable $fechaInicio as xs:dateTime external;
 
-declare function local:func($responseBody as element() (:: schema-element(ns1:OutputParameters) ::)) as element() (:: schema-element(ns2:actualizarLineaCreditoAppResponse) ::) {
-    <ns2:actualizarLineaCreditoAppResponse>
+declare function local:func($responseBody as element() (:: schema-element(ns1:OutputParameters) ::)) as element() (:: schema-element(ns2:actualizarLineaCreditoResponse) ::) {
+    <ns2:actualizarLineaCreditoResponse>
         <ns2:header>
             <ns2:idTransaccionESB>{fn:data($idTransaccionESB)}</ns2:idTransaccionESB>
             <ns2:idTransaccionNegocio>{fn:data($idTransaccionNegocio)}</ns2:idTransaccionNegocio>
@@ -54,7 +54,7 @@ declare function local:func($responseBody as element() (:: schema-element(ns1:Ou
                 }
             </ns2:responseStatus>
         </ns2:body>
-    </ns2:actualizarMontoEndeudamientoResponse>
+    </ns2:actualizarLineaCreditoResponse>
 };
 
 local:func($responseBody)

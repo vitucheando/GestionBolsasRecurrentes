@@ -16,12 +16,12 @@
                           schemaLocation="../XSD/Messages/ActivarBolsaResponse_v1.xsd"/>
       </xsd:schema>
       <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-            <xsd:import namespace="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCreditoAppRequest_request" 
-                          schemaLocation="../XSD/Messages/ActualizarLineaCreditoAppRequest_v1.xsd"/>
+            <xsd:import namespace="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCredito_request" 
+                          schemaLocation="../XSD/Messages/ActualizarLineaCreditoRequest_v1.xsd"/>
       </xsd:schema>
       <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-            <xsd:import namespace="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCreditoAppResponse_response" 
-                          schemaLocation="../XSD/Messages/ActualizarLineaCreditoAppResponse_v1.xsd"/>
+            <xsd:import namespace="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCredito_response" 
+                          schemaLocation="../XSD/Messages/ActualizarLineaCreditoResponse_v1.xsd"/>
       </xsd:schema>
    </grammars>
    
@@ -36,13 +36,13 @@
             </response>
          </method>
       </resource>
-      <resource path="/actualizarLineaCreditoApp">
-         <method name="POST" soa:wsdlOperation="actualizarLineaCreditoApp">
+      <resource path="/actualizarLineaCredito">
+         <method name="POST" soa:wsdlOperation="actualizarLineaCredito">
             <request>
-               <representation mediaType="application/json" element="req:actualizarLineaCreditoAppRequest" xmlns:req="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCreditoAppRequest_request"/>
+               <representation mediaType="application/json" element="req:actualizarLineaCreditoRequest" xmlns:req="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCredito_request"/>
             </request>
             <response status="200">
-               <representation mediaType="application/json" element="resp:actualizarLineaCreditoAppResponse" xmlns:resp="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCreditoAppResponse_response"/>
+               <representation mediaType="application/json" element="resp:actualizarLineaCreditoResponse" xmlns:resp="http://entel.com.pe/GestionBolsasRecurrentes_ActualizarLineaCredito_response"/>
             </response>
          </method>
       </resource>
