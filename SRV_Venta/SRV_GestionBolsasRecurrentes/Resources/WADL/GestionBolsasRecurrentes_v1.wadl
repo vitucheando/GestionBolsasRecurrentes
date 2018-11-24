@@ -1,0 +1,33 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<application xmlns:soa="http://www.oracle.com/soa/rest" 
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+             xmlns:ns0="http://entel.com.pe/GestionBolsasRecurrentes_ProcesarActivacionBolsasRecurrentesRequest_request" 
+             xmlns="http://wadl.dev.java.net/2009/02">
+             
+   <doc title="GestionBolsasRecurrentes">RestReference</doc>
+   <grammars>
+      <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://entel.com.pe/GestionBolsasRecurrentes_ProcesarActivacionBolsasRecurrentesRequest_request" 
+                          schemaLocation="../XSD/Messages/ProcesarActivacionBolsasRecurrentesRequest_v1.xsd"/>
+        </xsd:schema>
+      <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://entel.com.pe/GestionBolsasRecurrentes_ProcesarActivacionBolsasRecurrentesRequest_response" 
+                          schemaLocation="../XSD/Messages/ProcesarActivacionBolsasRecurrentesResponse_v1.xsd"/>
+        </xsd:schema>
+   </grammars>
+   
+   <resources>
+      <resource path="/procesarActivacionBolsasRecurrentes">
+         <method name="POST" soa:wsdlOperation="procesarActivacionBolsasRecurrentes">
+            <request>
+               <representation mediaType="application/json" element="req:procesarActivacionBolsasRecurrentesRequest" xmlns:req="http://entel.com.pe/GestionBolsasRecurrentes_ProcesarActivacionBolsasRecurrentesRequest_request"/>
+            </request>
+            <response status="200">
+               <representation mediaType="application/json" element="resp:procesarActivacionBolsasRecurrentesResponse" xmlns:resp="http://entel.com.pe/GestionBolsasRecurrentes_ProcesarActivacionBolsasRecurrentesRequest_response"/>
+            </response>
+         </method>
+      </resource>
+   </resources>
+   
+</application>
