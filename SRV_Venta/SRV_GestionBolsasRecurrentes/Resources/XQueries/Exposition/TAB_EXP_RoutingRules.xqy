@@ -16,6 +16,9 @@ xquery version "1.0" encoding "utf-8";
                     <XQ tipo="RESP">None</XQ>
                 </Transformation>  
             </DestinationService> 
+    	</Operation>
+        <Operation name="actualizarLineaCredito">
+            <loggerName>pe.com.EXP_GestionBolsasRecurrentesLog_v1</loggerName>
             <DestinationService>
                 <physicalPath>SRV_Venta/SRV_GestionBolsasRecurrentes/Service/Mediation/MED_GestionBolsasRecurrentes_v1</physicalPath>               
                 <esProxy>true</esProxy>
